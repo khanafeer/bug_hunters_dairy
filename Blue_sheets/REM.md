@@ -65,19 +65,48 @@ use PEid to check language, If packed unpack
 
 
 
-## PCAP Analysis
+## MalDocs
 
-I use [Brim](https://github.com/brimsec/brim) to convert large PCAPs to zeek logs
+### Tools
 
-```bash
-_path="dns" | count() by query
+```
+pip install XLMMacroDeobfuscator
+pip install msoffcrypto-tool
+```
 
-172.16.165.132 _path="files"
+### Examples
+
+```sql
+oledir sheet.xls
+
+msoffcrypto-tool document.doc --test -v
+msoffcrypto-tool document.xls --password VelvetSweatshop
+
+ olevba.exe .\sample.bin > vba.txt
+ 
+ 
+```
+
+
+
+**show all hidden sheets**
+
+```vb
+Sub ShowAllSheets()
+    Dim sh As Worksheet
+    For Each sh In ActiveWorkbook.Sheets
+    sh.Visible = True
+    Next
+End Sub
 ```
 
 
 
 
+
+```
+
+```
 
 
 

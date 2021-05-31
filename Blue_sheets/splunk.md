@@ -14,17 +14,12 @@
 
 ```bash
 | tstats <stats-function> from datamodel=<datamodel-name> where <where-conditions> by <field-list> 
-
-
 ```
 
 
 
 ```python
 `sysmon` Image=”*\\powershell.exe” OR Image=”*\\msbuild.exe” OR Image=”*\\psexec.exe” OR Image=”*\\at.exe” OR Image=”*\\schtasks.exe” OR Image=”*\\net.exe” OR Image=”*\\vssadmin.exe” OR Image=”*\\utilman.exe” OR Image=”*\\wmic.exe” OR Image=”*\\mshta.exe” OR Image=”*\\wscript.exe” OR Image=”*\\cscript.exe” OR Image=”*\\cmd.exe” OR Image=”*\\whoami.exe” OR Image=”*\\mmc.exe” OR Image=”*\\systeminfo.exe” OR Image=”*\\csvde.exe” OR Image=”*\\certutil.exe” | stats values(CommandLine) by Image
-
-
-
 ```
 
 ```
