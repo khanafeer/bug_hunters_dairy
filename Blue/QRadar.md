@@ -43,10 +43,6 @@ SELECT logsourceid, LOGSOURCENAME(logsourceid) AS 'Name of log source', LOGSOURC
 
 ```
 
-
-
-
-
 # Examples AQL
 
 EPS for Each data source
@@ -55,26 +51,24 @@ EPS for Each data source
 SELECT LOGSOURCENAME(logsourceid) AS "Log Source", SUM(eventcount) AS "Number of Events in Interval", SUM(eventcount) / 300 AS "EPS in Interval" FROM events GROUP BY "Log Source" ORDER BY "EPS in Interval" DESC LAST 5 MINUTES
 ```
 
-
-
 EPS for some log sources
 
 ```sql
 SELECT LOGSOURCENAME(logsourceid) AS "Log Source",DATEFORMAT( devicetime, 'dd-MM-yyyy') AS "Date_log", SUM(eventcount) AS "Number of Events in Interval", SUM(eventcount) / 86400 AS "EPS in Interval" FROM events WHERE "Log Source" ILIKE '%office%' OR "Log Source" ILIKE '%etokai%' GROUP BY "Log Source" ORDER BY "EPS in Interval" DESC LAST 24 HOURS
-
 ```
 
 ```sql
 SELECT DATEFORMAT( devicetime, 'dd-MM-yyyy') AS "Date_log", LOGSOURCENAME(logsourceid) AS "Log Source", SUM(eventcount) AS "Event Count" FROM events WHERE "Log Source" ILIKE '%office%' OR "Log Source" ILIKE '%etokai%' GROUP BY "Date_log","Log Source" ORDER BY "Date_log" START '2021-01-01 00:00:00' STOP '2021-02-10 00:00:00'
-
 ```
-
-
 
 EPS for EventIDs
 
 ```sql
 SELECT QIDNAME(qid) AS 'Event Name' ,"EventID" As 'Event ID', SUM(eventcount) As 'Count of events', SUM(eventcount) / 300 As 'EPS for EID' from events GROUP BY  QIDNAME(qid) ORDER BY "EPS for EID" DESC last 60 minutes
+```
+
+```sql
+SELECT QIDNAME(qid) AS 'Event Name' ,"EventID" As 'Event ID', SUM(eventcount) As 'Count of events', SUM(eventcount) / (300 * 10) As 'EPS for EID' from events WHERE LOGSOURCENAME(logsourceid) ILIKE '%apex%' GROUP BY  QIDNAME(qid) ORDER BY "EPS for EID" DESC last 10 days
 ```
 
 

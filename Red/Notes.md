@@ -1,4 +1,4 @@
-# Tips
+# PenTenting Tips
 
 ### General Tips
 
@@ -102,6 +102,4 @@
   - Checks to determine if we're in a Docker container
   - Checks to see if the host has Docker installed
   - Checks to determine if we're in an LXC container
-
-## 
 
