@@ -1,6 +1,6 @@
 # Enumeration
 
-**Manual Chech**
+**Manual Check**
 
 ```shell
 $ cat /etc/passwd
@@ -68,8 +68,6 @@ In memory passwords
 ssh keys
 #find / -name authorized_keys 2> /dev/null
 #find / -name id_rsa 2> /dev/null
-
-
 ```
 
 

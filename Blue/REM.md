@@ -11,6 +11,7 @@
 - PE Headers (PEView, CFF, )
 - Import table
 - Resource Section
+- On Remnux use, peframe -- signsrch -- pescanner
 
 ### Static Code Analysis
 
@@ -98,14 +99,6 @@ Sub ShowAllSheets()
     sh.Visible = True
     Next
 End Sub
-```
-
-
-
-
-
-```
-
 ```
 
 

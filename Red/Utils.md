@@ -15,5 +15,13 @@
 
 
 
+# SSH
+
+```sh
+sudo scp nosa@192.168.1.13:/tmp/docker.sh /home/khan/Downloads/docker.sh
+```
+
+
+
 
 

@@ -1,4 +1,6 @@
-# Installation
+# SOC Home Edition
+
+## Summary
 
 - [ ] Qrader
 - [ ] Splunk
@@ -6,3 +8,5 @@
 - [ ] Kape
 - [ ] Cukoo
 - [ ] 
+
+ 

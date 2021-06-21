@@ -73,16 +73,12 @@ index=botsv1 imreallynotbatman.com form_data="username=admin&*" sourcetype="stre
 | rex field=form_data "Signature string:(?<p>\w+)" 
 | dedup p 
 | stats count by _time, status, form_data,p
-
-
-
 ```
 
 
 
 ```
 index=* EventCode=4724 |table user, host , _time | dedup user
-
 ```
 
 

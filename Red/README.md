@@ -547,9 +547,6 @@ gcc -m32 -Wall -o exploit exp.c -Wl,--hash-style=both
 reg query "HKLM\system\CurrentControlSet\services\3ware" /v "ImagePath"
 
 .\ack.exe "Everyone" -kvuqsw HKLM\system\CurrentControlSet\services
-
-
-
 ```
 
 
